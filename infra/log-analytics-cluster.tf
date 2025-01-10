@@ -1,7 +1,7 @@
 ## Resource Group da Rimuovere e sostituire con quello creato su Azure ##
 resource "azurerm_resource_group" "log_analytics_rg" {
   name     = "${local.project}-log-analytics-rg"
-  location = "Italy North"
+  location = var.location
 }
 
 resource "azapi_resource" "log_analytics_cluster" {
@@ -12,7 +12,7 @@ resource "azapi_resource" "log_analytics_cluster" {
   identity {
     type = "SystemAssigned"
   }
-  location = "Italy North"
+  location = var.location
 
   body = {
     sku = {
