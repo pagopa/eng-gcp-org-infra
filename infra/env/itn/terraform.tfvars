@@ -2,8 +2,8 @@
 # general
 #
 
-env_short      = "d"
-env            = "dev"
+env_short      = "p"
+env            = "prod"
 prefix         = "log"
 location       = "italynorth"
 location_short = "itn"

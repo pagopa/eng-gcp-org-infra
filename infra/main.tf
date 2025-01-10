@@ -4,21 +4,9 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~>3.95"
     }
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "~>2.53"
-    }
     azapi = {
       source  = "Azure/azapi"
       version = "~>2.0"
-    }
-    null = {
-      source  = "hashicorp/null"
-      version = "~> 3.2"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.4"
     }
   }
   backend "azurerm" {}
