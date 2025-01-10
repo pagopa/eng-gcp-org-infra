@@ -25,10 +25,6 @@ resource "azapi_resource" "log_analytics_cluster" {
         }
       ]
       billingType = "Workspaces"
-      capacityReservationProperties = {
-      }
-      isAvailabilityZonesEnabled = true
-      isDoubleEncryptionEnabled  = true
     }
   }
 }

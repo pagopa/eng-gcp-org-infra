@@ -35,13 +35,6 @@ provider "azurerm" {
 
 provider "azapi" {}
 
-data "azurerm_subscription" "current" {}
-data "azurerm_client_config" "current" {}
-
-resource "random_id" "unique" {
-  byte_length = 3
-}
-
 output "project" {
   value = local.project
 }
