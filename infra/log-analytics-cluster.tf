@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "log_analytics_rg" {
 
 resource "azapi_resource" "log_analytics_cluster" {
   type      = "Microsoft.OperationalInsights/clusters@2023-09-01"
-  name      = "${local.project}-log-analytics-cluster"
+  name      = "${local.project}-log-cluster"
   parent_id = azurerm_resource_group.log_analytics_rg.id
 
   identity {
