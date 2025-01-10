@@ -16,9 +16,9 @@ variable "env" {
   type = string
   validation {
     condition = (
-      length(var.env) <= 3
+      length(var.env) <= 4
     )
-    error_message = "Max length is 3 chars."
+    error_message = "Max length is 4 chars."
   }
 }
 
@@ -33,7 +33,7 @@ variable "env_short" {
 }
 
 variable "location" {
-  type    = string
+  type = string
   #default = "westeurope"
 }
 
@@ -46,15 +46,5 @@ variable "tags" {
   type = map(any)
   default = {
     CreatedBy = "Terraform"
-  }
-}
-
-variable "domain" {
-  type = string
-  validation {
-    condition = (
-      length(var.domain) <= 12
-    )
-    error_message = "Max length is 12 chars."
   }
 }

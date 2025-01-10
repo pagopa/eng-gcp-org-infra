@@ -4,15 +4,14 @@
 
 env_short      = "p"
 env            = "prod"
-prefix         = "log"
+prefix         = "org"
 location       = "westeurope"
 location_short = "weu"
-domain         = "core"
 
 tags = {
   CreatedBy   = "Terraform"
-  Environment = "DEV"
-  Owner       = "Azure Log Analytics Lab"
+  Environment = "PROD"
+  Owner       = "Cloud Strategy and Governance"
   Source      = "https://github.com/pagopa/eng-azure-org-infra"
   CostCenter  = "TS110 - Technology"
 }

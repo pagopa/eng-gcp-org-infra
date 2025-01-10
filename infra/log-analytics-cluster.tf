@@ -1,7 +1,8 @@
-## Resource Group da Rimuovere e sostituire con quello creato su Azure ##
 resource "azurerm_resource_group" "log_analytics_rg" {
-  name     = "${local.project}-log-analytics-rg"
+  name     = "${local.project}-log-rg"
   location = var.location
+
+  tags = var.tags
 }
 
 resource "azapi_resource" "log_analytics_cluster" {
@@ -20,11 +21,12 @@ resource "azapi_resource" "log_analytics_cluster" {
       name     = "CapacityReservation"
     }
     properties = {
-      associatedWorkspaces = [
-        {
-        }
-      ]
-      billingType = "Workspaces"
+      # associatedWorkspaces = [
+      #   {
+      #   }
+      # ]
+      isAvailabilityZonesEnabled = true
+      billingType                = "Workspaces"
     }
   }
 }
