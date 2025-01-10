@@ -17,7 +17,7 @@ if [[ -z "$env" ]]; then
     exit 1
 fi
 
-envs="dev / prod"
+envs="itn / weu"
 if ! printf "%s" "$envs" | grep -w "$env" > /dev/null; then
   printf "%s\n" "terraform.sh: env should be only $envs"
   exit 1
