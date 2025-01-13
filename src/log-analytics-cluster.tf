@@ -14,19 +14,17 @@ resource "azapi_resource" "log_analytics_cluster" {
     type = "SystemAssigned"
   }
   location = var.location
-
+  tags     = var.tags
   body = {
     sku = {
       capacity = 100
       name     = "CapacityReservation"
     }
     properties = {
-      # associatedWorkspaces = [
-      #   {
-      #   }
-      # ]
-      isAvailabilityZonesEnabled = true
-      billingType                = "Workspaces"
+      capacityReservationProperties = {}
+      isDoubleEncryptionEnabled     = true
+      isAvailabilityZonesEnabled    = true
+      billingType                   = "Workspaces"
     }
   }
 }
